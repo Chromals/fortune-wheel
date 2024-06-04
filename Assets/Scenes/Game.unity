@@ -880,8 +880,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1992957957}
-  - {fileID: 1414773953}
   - {fileID: 979495706}
+  - {fileID: 1414773953}
   m_Father: {fileID: 76847620}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1140,6 +1140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776320839}
+  - component: {fileID: 776320840}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1154,14 +1155,33 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776320838}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 166.24478, y: 118.28519, z: -0.012518298}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 166.24478, y: 118.28519, z: -0.012518299}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776320840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776320838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7fdec458715264984c5b3d37dce34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnsTextBox: {fileID: 1304775054}
+  winningsTextbox: {fileID: 1190799227}
+  fortuneWheel: {fileID: 1307290042}
+  spinButton: {fileID: 1414773954}
+  turns: 4
+  cycles: 6
+  maxSpinningTime: 7
 --- !u!1 &802058757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1293,7 @@ RectTransform:
   - {fileID: 242675026}
   - {fileID: 1190799226}
   m_Father: {fileID: 661192471}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1728,7 +1748,7 @@ RectTransform:
   m_Children:
   - {fileID: 420645}
   m_Father: {fileID: 661192471}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1778,7 +1798,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1414773955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 776320840}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Spin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1414773955
 MonoBehaviour:
   m_ObjectHideFlags: 0
